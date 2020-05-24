@@ -441,6 +441,7 @@ a, a:hover {
     color: #000000;
     margin-left: 8%;
     margin-right: 8%;
+    padding-bottom: 20px;
 }
 
 @media screen and (min-width: 961px) {
