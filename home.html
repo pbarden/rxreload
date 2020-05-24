@@ -38,15 +38,31 @@
     </header>
     <main>
       <img id="site_bg" class="lazy" data-src="images/main_bg.svg">
+      <div class="warks">
+        <ul>
+          <a href="http://ancient-river-60175.herokuapp.com/">
+            <li class="wark"><img class="lazy logo hidden" data-src="images/tiny.png"></li>
+          </a>
+          <a href="http://ancient-river-60175.herokuapp.com/poseidon/">
+            <li class="wark"><img class="lazy logo hidden" data-src="images/erwin.svg"></li>
+          </a>
+          <a href="https://test-bsit.herokuapp.com/">
+            <li class="wark"><img class="lazy logo hidden" data-src="images/swf.png"></li>
+          </a>
+        </ul>
+      </div>
     </main>
     <footer>
       <p>&copy; <span id="yr"></span> PAUL BARDEN</p>
     </footer>
-    <script>
+    <script id="getLazy">
       window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("yr").innerHTML = new Date().getFullYear();
-        for(var t=document.getElementsByClassName("lazy"),e=0;e<t.length;e++)t[e].hasAttribute("data-src")&&(t[e].setAttribute("src",t[e].getAttribute("data-src")),t[e].removeAttribute("data-src"),t[e].style.visibility="visible");
+        for(var t=document.getElementsByClassName("lazy"),e=0;e<t.length;e++)t[e].hasAttribute("data-src")&&(t[e].setAttribute("src",t[e].getAttribute("data-src")),t[e].removeAttribute("data-src"),t[e].style.visibility="visible");var r=document.getElementById("getLazy");r.parentNode.removeChild(r);
       });
+      window.onload = function(){
+        setTimeout(show_me, 5000)
+      };
     </script>
   </body>
   <script src="scripts/reload.js"></script>
