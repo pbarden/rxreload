@@ -435,6 +435,7 @@ a, a:hover {
 .modal-inner > img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 @media screen and (max-width:550px) {
