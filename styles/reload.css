@@ -184,34 +184,12 @@ nav > ul {
 }
 
 .menu_option:hover {
-    animation: optchange 2.0s;
-    
-}
-
-@keyframes optchange {
-    from {
-        color: snow;
-        outline-color: snow;
-    } 
-    to {
-        color: #d1cc28;
-        outline-color: #d1cc28;
-    }
+    color: #d1cc28;
+    outline-color: #d1cc28;
 }
 
 .menu_option:hover > .opt {
     letter-spacing: 12px;
-}
-
-@keyframes ard {
-    from {
-        right: -800px;
-        opacity: 0;
-    } 
-    to {
-        right: 0;
-        opacity: 1;
-    }
 }
 
 .opt {
