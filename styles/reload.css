@@ -324,6 +324,16 @@ h1 {
                  margin-bottom: 0px !important;
 }
 
+h2 {
+    font-size: 50px;
+    color: snow;
+    text-shadow: 2px 2px #000000,
+                 2px -2px #000000,
+                 -2px 2px #000000,
+                 -2px -2px #000000;
+                 margin-bottom: 0px !important;
+}
+
 .page_title {
     position: absolute;
     right: 7%;
@@ -383,4 +393,59 @@ h1 {
 
 a, a:hover {
     text-decoration: none;
+}
+
+.modal {
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+}
+
+.modal-inner {
+    position: fixed;
+    overflow-x: hidden;
+    border: 4px solid #2d2930;
+    background-color: snow;
+    z-index: 10;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 15%;
+}
+
+@media (min-width: 960px) {
+    .modal-inner {
+        top: 10%;
+        left: 5%;
+        right: 5%;
+        bottom: 15%;
+    }
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-inner > img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-inner > p {
+    color: #000000;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+@media screen and (min-width: 961px) {
+    .modal-inner > p {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
 }

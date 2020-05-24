@@ -12,3 +12,13 @@ function show_me() {
         t[e].style.display = "inline";
     }
 }
+
+// function to open modal by id
+function showModal(itemId) {
+    document.getElementById(itemId).style.display="block";
+}
+
+// function to close modal by id
+function closeModal(itemId) {
+    document.getElementById(itemId).style.display="none";
+}
