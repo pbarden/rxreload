@@ -27,6 +27,7 @@ main {
     width: 90%;
     text-align: center;
     overflow-x: hidden;
+    position: relative;
 }
 
 footer {
@@ -54,7 +55,7 @@ footer {
 }
 
 #site_bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
