@@ -41,13 +41,13 @@
       <div class="warks">
         <ul>
           <a href="http://ancient-river-60175.herokuapp.com/">
-            <li class="wark"><img class="lazy logo hidden" data-src="images/tiny.png"></li>
+            <li class="wark"><img class="lazy logo hidden" data-src="images/tiny.png" title="Paul Barden | Resume"></li>
           </a>
           <a href="http://ancient-river-60175.herokuapp.com/poseidon/">
-            <li class="wark"><img class="lazy logo hidden" data-src="images/erwin.svg"></li>
+            <li class="wark"><img class="lazy logo hidden" data-src="images/erwin.svg" title="Erwin | Open Video Streaming"></li>
           </a>
           <a href="https://test-bsit.herokuapp.com/">
-            <li class="wark"><img class="lazy logo hidden" data-src="images/swf.png"></li>
+            <li class="wark"><img class="lazy logo hidden" data-src="images/swf.png" title="Super Web Framework"></li>
           </a>
         </ul>
       </div>
@@ -58,7 +58,8 @@
     <script id="getLazy">
       window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("yr").innerHTML = new Date().getFullYear();
-        for(var t=document.getElementsByClassName("lazy"),e=0;e<t.length;e++)t[e].hasAttribute("data-src")&&(t[e].setAttribute("src",t[e].getAttribute("data-src")),t[e].removeAttribute("data-src"),t[e].style.visibility="visible");var r=document.getElementById("getLazy");r.parentNode.removeChild(r);
+        for(var t=document.getElementsByClassName("lazy"),e=0;e<t.length;e++)t[e].hasAttribute("data-src")&&(t[e].setAttribute("src",t[e].getAttribute("data-src")),t[e].removeAttribute("data-src"),t[e].style.visibility="visible");
+        var r=document.getElementById("getLazy");r.parentNode.removeChild(r);
       });
       window.onload = function(){
         setTimeout(show_me, 5000)

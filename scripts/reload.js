@@ -6,6 +6,7 @@ function swap_bg(color, image) {
     data_bg.style.backgroundColor = new_bg_color;
     data_image.setAttribute("src", new_bg_image);
 }
+
 function show_me() { 
     for(var t=document.getElementsByClassName("hidden"),e=0;e<t.length;e++){
         t[e].style.display = "inline";
