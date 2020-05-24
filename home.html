@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Software Engineer, Optimization, Full Stack | Paul Barden</title>
+    <link rel="stylesheet" type="text/css" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Software Engineer, Optimization, Full Stack | Paul Barden">
+    <meta property="og:description" content="Totally awesome, multi-talented software engineer. Currently working as a senior optimization developer at Speed Boostr.">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="http://pbarden.io/">
+    <link rel="icon" sizes="128x128" href="images/tiny.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="images/tiny.png">
+    <link rel="icon" href="images/tiny.png" type="image/png">
+    <link rel="stylesheet" href="styles/reload.css">
+  </head>
+  <body id="body_bg">
+    <header>
+      <nav>
+        <div class="page_title">
+          <h1><span class="first_name">PAUL</span> <span class="last_name">BARDEN</span></h1>
+        </div>
+        <ul class="buffer">
+          <a href="https://www.linkedin.com/in/paulbarden/" target="_blank">
+            <li class="menu_option ar1"><span class="opt">ABOUT</span></li>
+          </a>
+          <a href="https://speedboostr.com/" target="_blank">
+            <li class="menu_option ar2"><span class="opt">WORK</span></li>
+          </a>
+          <a href="https://github.com/pbarden" target="_blank">
+            <li class="menu_option ar3"><span class="opt">PLAY</span></li>
+          </a>
+          <a href="mailto:contact@pbarden.io" target="_blank">
+            <li class="menu_option ar4"><span class="opt">CHAT</span></li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img id="site_bg" class="lazy" data-src="images/main_bg.svg">
+    </main>
+    <footer>
+      <p>&copy; <span id="yr"></span> PAUL BARDEN</p>
+    </footer>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById("yr").innerHTML = new Date().getFullYear();
+        for(var t=document.getElementsByClassName("lazy"),e=0;e<t.length;e++)t[e].hasAttribute("data-src")&&(t[e].setAttribute("src",t[e].getAttribute("data-src")),t[e].removeAttribute("data-src"),t[e].style.visibility="visible");
+      });
+    </script>
+  </body>
+  <script src="scripts/reload.js"></script>
+</html>
