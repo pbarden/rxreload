@@ -437,6 +437,24 @@ a, a:hover {
     height: auto;
 }
 
+@media screen and (max-width:550px) {
+    .modal-inner > img {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:960px) {
+    .modal-inner > img {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width:961px) and (max-width:1200px) {
+    .modal-inner > img {
+        max-width: 1200px;
+    }
+}
+
 .modal-inner > p {
     color: #000000;
     margin-left: 8%;
