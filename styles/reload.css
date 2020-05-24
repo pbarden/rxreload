@@ -432,7 +432,7 @@ a, a:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.modal-inner > img {
+.modal-inner > a > img {
     width: 100%;
     height: auto;
     display: block;
