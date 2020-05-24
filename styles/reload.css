@@ -312,6 +312,7 @@ a, a:hover {
     left: 2%;
     top: 25%;
     bottom: 25%;
+    z-index: 10;
 }
 
 .wark {
@@ -326,6 +327,14 @@ a, a:hover {
     margin: 12px;
     transition: all 0.8s ease;
     animation: fading 1s;
+}
+
+@media screen and (max-width:960px){
+    .logo {
+        height: 40px;
+        width: 40px;
+        margin: 8px;
+    }
 }
 
 @keyframes fading {
