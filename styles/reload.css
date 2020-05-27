@@ -472,3 +472,24 @@ a, a:hover {
         margin-right: 12%;
     }
 }
+
+.alfa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10 !important;
+    width: 30%;
+    height: 100%;
+}
+
+@media screen and (min-width: 661px) and (max-width: 960px) {
+    .alfa {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .alfa {
+        width: 60%;
+    }
+}
