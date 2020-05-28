@@ -400,6 +400,7 @@ a, a:hover {
     text-align: center;
     vertical-align: middle;
     position: fixed;
+    z-index: 10;
 }
 
 .modal-inner {
@@ -430,12 +431,14 @@ a, a:hover {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
 }
 
 .modal-inner > a > img {
     width: 100%;
     height: auto;
     display: block;
+    z-index: 10;
 }
 
 @media screen and (max-width:550px) {
@@ -464,6 +467,7 @@ a, a:hover {
     margin-left: 8%;
     margin-right: 8%;
     padding-bottom: 20px;
+    z-index: 10;
 }
 
 @media screen and (min-width: 961px) {
@@ -477,7 +481,7 @@ a, a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9 !important;
+    z-index: 9;
     width: 30%;
     height: 100%;
 }
