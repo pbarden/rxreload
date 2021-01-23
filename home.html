@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="launchr" onload="launchBtn(this)">
   <head>
     <meta charset="utf-8">
     <title>Software Engineer, Optimization, Full Stack | Paul Barden</title>
@@ -13,6 +13,7 @@
     <link rel="apple-touch-icon" sizes="128x128" href="images/tiny.png">
     <link rel="icon" href="images/tiny.png" type="image/png">
     <link rel="stylesheet" href="styles/reload.min.css">
+    <link rel="preload" as="image" href="images/main_bg.svg">
   </head>
   <body id="body_bg">
     <header>
@@ -100,6 +101,12 @@
         var r=document.getElementById("getLazy");r.parentNode.removeChild(r);
       });
     </script>
+    <script>
+      function launchBtn(d) {
+        var ls = document.getElementById(d);
+        ls.style.display = "block";
+      }
+  </script>
   </body>
   <script src="scripts/reload.min.js"></script>
 </html>
