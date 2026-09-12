@@ -483,6 +483,67 @@ a, a:hover {
     white-space: nowrap;
 }
 
+.readme-content {
+    text-align: left;
+    color: #000000;
+    margin: 0 8% 20px;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 961px) {
+    .readme-content {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+}
+
+.readme-status {
+    text-align: center;
+}
+
+.readme-content h1,
+.readme-content h2,
+.readme-content h3 {
+    color: #000000;
+    text-shadow: none;
+    font-size: 1.3em;
+    margin: 24px 0 8px;
+}
+
+.readme-content h1:first-child,
+.readme-content h2:first-child,
+.readme-content h3:first-child {
+    margin-top: 0;
+}
+
+.readme-content p {
+    margin: 0 0 12px;
+}
+
+.readme-content ul {
+    margin: 0 0 16px;
+    padding-left: 1.2em;
+}
+
+.readme-content li {
+    margin-bottom: 10px;
+}
+
+.readme-content a {
+    color: #0054aa;
+    text-decoration: underline;
+}
+
+.readme-content hr {
+    border: none;
+    border-top: 1px solid #2d2930;
+    margin: 20px 0;
+}
+
+.readme-content .anchor {
+    display: none;
+}
+
 .projects-sub {
     color: #000000;
     margin: 0 8% 15px;
