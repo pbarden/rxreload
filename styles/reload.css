@@ -23,6 +23,14 @@ body {
     font-size: 24px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
 main {
     width: 90%;
     text-align: center;
@@ -40,16 +48,64 @@ footer {
     bottom: 0;
     color: whitesmoke;
     background-color: rgb(50, 50, 50);
+    animation: fade-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
-@keyframes ftan {
+#site_bg,
+footer,
+.first_name,
+.last_name,
+.ar1, .ar2, .ar3, .ar5, .ar6, .ar7,
+.hr1 {
+    will-change: transform, opacity;
+}
+
+@keyframes fade-slide-up {
     from {
-        bottom: -100px;
-        opacity: 0.4;
-    } 
+        opacity: 0;
+        transform: translateY(24px);
+    }
     to {
-        bottom: 0px;
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes draw-line {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
     }
 }
 
@@ -60,16 +116,17 @@ footer {
     width: 100%;
     height: auto;
     z-index: -1;
+    animation: fade-slide-right 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-@keyframes bgan {
+@keyframes fade-slide-right {
     from {
-        left: -800px;
-        opacity: 0.4;
-    } 
+        opacity: 0;
+        transform: translateX(-60px);
+    }
     to {
-        left: 0px;
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -127,135 +184,56 @@ nav > ul {
     max-width: 450px;
 }
 
-.ar1 {
+.ar1, .ar2, .ar3, .ar5, .ar6, .ar7 {
     position: relative;
+    animation: fade-slide-left 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ar1 {
+    animation-delay: 0.35s;
 }
 
 .ar2 {
-    position: relative;
+    animation-delay: 0.42s;
 }
 
 .ar3 {
-    position: relative;
-}
-
-.ar4 {
-    position: relative;
-}
-
-@keyframes ara {
-    from {
-        right: -300px;
-        opacity: 0;
-    } 
-    to {
-        right: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes arb {
-    from {
-        right: -500px;
-        opacity: 0;
-    } 
-    to {
-        right: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes arc {
-    from {
-        right: -650px;
-        opacity: 0;
-    } 
-    to {
-        right: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes ard {
-    from {
-        right: -800px;
-        opacity: 0;
-    } 
-    to {
-        right: 0;
-        opacity: 1;
-    }
+    animation-delay: 0.49s;
 }
 
 .hr1 {
     border-style: solid;
     border-color: snow;
     position: relative;
+    transform-origin: left center;
+    animation: draw-line 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.56s;
 }
 
-@keyframes hra {
-    from {
-        left: -300px;
-        opacity: 0;
-        border-width: 30px;
-        margin-left: 0%;
-    } 
-    to {
-        left: 0;
-        opacity: 1;
-        border-width: 1px;
-        margin-left: 60%
-    }
+.ar5, .ar6, .ar7 {
+    animation-name: fade-slide-up;
 }
 
 .ar5 {
-    position: relative;
-}
-
-@keyframes arf {
-    from {
-        bottom: -300px;
-        opacity: 0;
-    } 
-    to {
-        bottom: 0;
-        opacity: 1;
-    }
+    animation-delay: 0.63s;
 }
 
 .ar6 {
-    position: relative;
-}
-
-@keyframes arg {
-    from {
-        bottom: -400px;
-        opacity: 0;
-    } 
-    to {
-        bottom: 0;
-        opacity: 1;
-    }
+    animation-delay: 0.7s;
 }
 
 .ar7 {
-    position: relative;
+    animation-delay: 0.77s;
 }
 
-@keyframes arh {
-    from {
-        bottom: -450px;
-        opacity: 0;
-    } 
-    to {
-        bottom: 0;
-        opacity: 1;
-    }
+.menu_option {
+    transition: color 0.25s ease, outline-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .menu_option:hover {
     color: #d1cc28;
     outline-color: #d1cc28;
+    transform: translateX(-6px);
 }
 
 .menu_option:hover > .opt {
@@ -266,6 +244,8 @@ nav > ul {
     padding-left: 30px;
     font-size: 30px;
     letter-spacing: 3px;
+    display: inline-block;
+    transition: letter-spacing 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .menu_hr {
@@ -344,17 +324,7 @@ h2 {
 
 .first_name {
     position: relative;
-}
-
-@keyframes fnam {
-    from {
-        right: -600px;
-        opacity: 0;
-    } 
-    to {
-        right: 0;
-        opacity: 1;
-    }
+    animation: fade-slide-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
 .last_name {
@@ -366,17 +336,7 @@ h2 {
                  -2px 2px #000000,
                  -2px -2px #000000;
     position: relative;
-}
-
-@keyframes lnan {
-    from {
-        top: -800px;
-        opacity: 0;
-    } 
-    to {
-        top: 0;
-        opacity: 1;
-    }
+    animation: fade-slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
 }
 
 a, a:hover {
@@ -384,16 +344,27 @@ a, a:hover {
 }
 
 .modal {
-    display: none;
     text-align: center;
     vertical-align: middle;
     position: fixed;
     z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.3s;
+}
+
+.modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-inner {
     position: fixed;
     overflow-x: hidden;
+    overflow-y: auto;
     border: 4px solid #2d2930;
     background-color: snow;
     z-index: 10;
@@ -401,6 +372,12 @@ a, a:hover {
     left: 5%;
     right: 5%;
     bottom: 15%;
+    transform: translateY(20px) scale(0.98);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal.is-open .modal-inner {
+    transform: translateY(0) scale(1);
 }
 
 @media (min-width: 960px) {
@@ -465,6 +442,100 @@ a, a:hover {
     }
 }
 
+.exp-list {
+    list-style: none;
+    text-align: left;
+    margin: 0 8% 20px;
+    padding: 0;
+}
+
+.exp-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 4px 20px;
+    border-bottom: 1px solid #2d2930;
+    padding: 12px 0;
+    color: #000000;
+}
+
+.exp-title {
+    flex: 1 1 260px;
+    font-weight: bold;
+}
+
+.exp-company {
+    flex: 0 0 auto;
+    opacity: 0.85;
+}
+
+.exp-dates {
+    flex: 0 0 auto;
+    font-size: 0.8em;
+    opacity: 0.65;
+    white-space: nowrap;
+}
+
+.projects-sub {
+    color: #000000;
+    margin: 0 8% 15px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 0 5% 20px;
+}
+
+.project-card {
+    display: block;
+    border: 2px solid #2d2930;
+    background-color: snow;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.project-thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 12px;
+    background-color: #2d2930;
+}
+
+.project-name {
+    color: snow;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.project-lang {
+    color: #d1cc28;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.project-loading,
+.project-error {
+    color: #000000;
+    margin: 20px 8%;
+}
+
 .alfa {
     position: fixed;
     top: 0;
@@ -486,44 +557,3 @@ a, a:hover {
     }
 }
 
-@media (min-width: 961px) {
-    footer {
-        animation: ftan 2.0s;
-    }
-    #site_bg {
-        animation: bgan 2.8s;
-    }
-    .ar1 {
-        animation: ara 0.8s;
-    }
-    
-    .ar2 {
-        animation: arb 1.2s;
-    }
-    
-    .ar3 {
-        animation: arc 1.4s;
-    }
-    
-    .ar4 {
-        animation: ard 1.5s;
-    }
-    .hr1 {
-        animation: hra 1.5s;
-    }
-    .ar5 {
-        animation: arf 1.5s;
-    }
-    .ar6 {
-        animation: arg 2s;
-    }
-    .ar7 {
-        animation: arh 2.5s;
-    }
-    .first_name {
-        animation: fnam 1.5s;
-    }
-    .last_name {
-        animation: lnan 1.7s;
-    }
-}

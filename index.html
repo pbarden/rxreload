@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Software Engineer & CRO/Optimization Leader | Paul Barden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta property="og:title" content="Software Engineer & CRO/Optimization Leader | Paul Barden">
+    <meta property="og:description" content="Software engineer and CRO / optimization leader with 10+ years across full-stack development, experimentation, and eCommerce site experience. Also building AI tooling, games, and web experiments on the side.">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://pbarden.github.io/rxreload/">
+    <link rel="icon" sizes="128x128" href="images/tiny.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="images/tiny.png">
+    <link rel="icon" href="images/tiny.png" type="image/png">
+    <link rel="stylesheet" href="styles/reload.css">
+    <link rel="preload" as="image" href="images/main_bg.svg">
+  </head>
+  <body id="body_bg">
+    <header>
+      <nav>
+        <div class="page_title">
+          <h1><span class="first_name">PAUL</span> <span class="last_name">BARDEN</span></h1>
+        </div>
+        <ul class="buffer">
+          <a href="https://www.linkedin.com/in/paulbarden/" target="_blank">
+            <li class="menu_option ar1"><span class="opt">MEET</span></li>
+          </a>
+          <a href="https://github.com/pbarden" target="_blank">
+            <li class="menu_option ar2"><span class="opt">CODE</span></li>
+          </a>
+          <a href="mailto:paulthepirateking@gmail.com" target="_blank">
+            <li class="menu_option ar3"><span class="opt">CHAT</span></li>
+          </a>
+          <hr class="menu_hr hr1">
+          <li class="menu_option ar5" onclick="showModal('item1')"><span class="opt">PROFILE</span></li>
+          <li class="menu_option ar6" onclick="showModal('item2')"><span class="opt">EXPERIENCE</span></li>
+          <li class="menu_option ar7" onclick="showModal('item3')"><span class="opt">PROJECTS</span></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img id="site_bg" class="lazy" data-src="images/main_bg.svg">
+      <!-- Modals -->
+      <div class="modal" id="item1">
+        <div class="modal-inner">
+          <h2>Profile</h2>
+          <hr>
+          <p>
+            Software engineer and CRO / optimization leader with 10+ years across full-stack development, experimentation, UX research, and eCommerce site experience. Currently leading CRO and site experience for a confidential eCommerce brand, following stints running optimization and engineering for Bane Digital, Western Governors University, and ChaiQ, which I co-founded in 2025.
+          </p>
+          <p>
+            Outside of the day job, I build things across a pretty wide range &mdash; AI/ML tooling, games, and web experiments. Recent side projects include a CPU-optimized language model training system, a browser-based AI workflow builder, and a Three.js game creation studio. Check out PROJECTS for a live feed of what I'm currently shipping.
+          </p>
+          <p><a href="https://github.com/pbarden/pbarden" target="_blank">github.com/pbarden</a></p>
+        </div>
+        <div class="overlay" onclick="closeModal('item1')"></div>
+      </div>
+      <div class="modal" id="item2">
+        <div class="modal-inner">
+          <h2>Experience</h2>
+          <hr>
+          <ul class="exp-list">
+            <li class="exp-item">
+              <span class="exp-title">Senior Manager, CRO &amp; Site Experience (eCommerce)</span>
+              <span class="exp-company">Confidential (NDA)</span>
+              <span class="exp-dates">2026 &ndash; Present</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">UX Researcher &amp; Strategist</span>
+              <span class="exp-company">Anatta Design</span>
+              <span class="exp-dates">2025 &ndash; 2026</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">Solopreneur, Digital Experience Engineer</span>
+              <span class="exp-company">moon man digital</span>
+              <span class="exp-dates">2025 &ndash; 2026</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">Co-Founder, CTO</span>
+              <span class="exp-company">ChaiQ</span>
+              <span class="exp-dates">2025</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">CTO, Head of Optimization</span>
+              <span class="exp-company">Bane Digital</span>
+              <span class="exp-dates">2024 &ndash; 2025</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">Sr. CRO Testing &amp; Personalization, Digital Experience Manager</span>
+              <span class="exp-company">Western Governors University</span>
+              <span class="exp-dates">2022 &ndash; 2024</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">Software Engineering Manager (Solutions Architecture)</span>
+              <span class="exp-company">Speed Boostr</span>
+              <span class="exp-dates">2018 &ndash; 2021</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">Lead QA Test Engineer</span>
+              <span class="exp-company">iBeta Quality Assurance</span>
+              <span class="exp-dates">2018 &ndash; 2019</span>
+            </li>
+            <li class="exp-item">
+              <span class="exp-title">Web Development Manager</span>
+              <span class="exp-company">Dead Leaf Digital</span>
+              <span class="exp-dates">2013 &ndash; 2017</span>
+            </li>
+          </ul>
+        </div>
+        <div class="overlay" onclick="closeModal('item2')"></div>
+      </div>
+      <div class="modal" id="item3">
+        <div class="modal-inner">
+          <h2>Projects</h2>
+          <hr>
+          <p class="projects-sub">Live from <a href="https://github.com/pbarden" target="_blank" rel="noopener">github.com/pbarden</a> &mdash; sorted by most recently updated.</p>
+          <div class="projects-grid" id="projects-grid">
+            <p class="project-loading" id="projects-status">Loading repos&hellip;</p>
+          </div>
+        </div>
+        <div class="overlay" onclick="closeModal('item3')"></div>
+      </div>
+      <div class="alfa"></div>
+    </main>
+    <footer>
+      <p>&copy; <span id="yr"></span> PAUL BARDEN</p>
+    </footer>
+    <script id="getLazy">
+      window.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById("yr").innerHTML = new Date().getFullYear();
+        for(var t=document.getElementsByClassName("lazy"),e=0;e<t.length;e++)t[e].hasAttribute("data-src")&&(t[e].setAttribute("src",t[e].getAttribute("data-src")),t[e].removeAttribute("data-src"),t[e].style.visibility="visible");
+        var r=document.getElementById("getLazy");r.parentNode.removeChild(r);
+      });
+    </script>
+  </body>
+  <script src="scripts/reload.js"></script>
+</html>
