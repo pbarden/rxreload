@@ -242,10 +242,16 @@ nav > ul {
 
 .opt {
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 3px;
     display: inline-block;
     transition: letter-spacing 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width:760px) {
+    .opt {
+        font-size: 30px;
+    }
 }
 
 .menu_hr {
