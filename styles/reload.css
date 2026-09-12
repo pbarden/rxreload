@@ -48,15 +48,43 @@ footer {
     bottom: 0;
     color: whitesmoke;
     background-color: rgb(50, 50, 50);
+    padding: 14px 0 6px;
     animation: fade-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+footer p {
+    margin: 6px 0 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.social-link {
+    display: inline-flex;
+    color: whitesmoke;
+    transition: color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-link:hover {
+    color: #d1cc28;
+    transform: translateY(-3px);
+}
+
+.social-link svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
 }
 
 #site_bg,
 footer,
 .first_name,
 .last_name,
-.ar1, .ar2, .ar3, .ar5, .ar6, .ar7,
-.hr1 {
+.ar5, .ar6, .ar7 {
     will-change: transform, opacity;
 }
 
@@ -90,22 +118,6 @@ footer,
     to {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes draw-line {
-    from {
-        opacity: 0;
-        transform: scaleX(0);
-    }
-    to {
-        opacity: 1;
-        transform: scaleX(1);
     }
 }
 
@@ -184,46 +196,21 @@ nav > ul {
     max-width: 450px;
 }
 
-.ar1, .ar2, .ar3, .ar5, .ar6, .ar7 {
-    position: relative;
-    animation: fade-slide-left 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.ar1 {
-    animation-delay: 0.35s;
-}
-
-.ar2 {
-    animation-delay: 0.42s;
-}
-
-.ar3 {
-    animation-delay: 0.49s;
-}
-
-.hr1 {
-    border-style: solid;
-    border-color: snow;
-    position: relative;
-    transform-origin: left center;
-    animation: draw-line 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-    animation-delay: 0.56s;
-}
-
 .ar5, .ar6, .ar7 {
-    animation-name: fade-slide-up;
+    position: relative;
+    animation: fade-slide-up 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .ar5 {
-    animation-delay: 0.63s;
+    animation-delay: 0.35s;
 }
 
 .ar6 {
-    animation-delay: 0.7s;
+    animation-delay: 0.42s;
 }
 
 .ar7 {
-    animation-delay: 0.77s;
+    animation-delay: 0.49s;
 }
 
 .menu_option {
@@ -254,12 +241,8 @@ nav > ul {
     }
 }
 
-.menu_hr {
-    width: 100%;
-}
-
 @media screen and (min-width: 661px) and (max-width: 960px) {
-    .menu_option, .menu_hr {
+    .menu_option {
         margin-left: 45%;
         margin-right: 8%;
     }
@@ -270,7 +253,7 @@ nav > ul {
 }
 
 @media screen and (min-width: 961px) and (max-width: 1400px) {
-    .menu_option, .menu_hr {
+    .menu_option {
         margin-left: 60%;
         margin-right: 5%;
     }
@@ -281,7 +264,7 @@ nav > ul {
 }
 
 @media screen and (min-width: 1401px) {
-    .menu_option, .menu_hr {
+    .menu_option {
         margin-left: 60%;
         margin-right: 8%;
     }
